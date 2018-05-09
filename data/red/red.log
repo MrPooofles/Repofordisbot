@@ -1,0 +1,124 @@
+[09/05/2018 15:26] ERROR red load_cogs 573: ffmpeg isn't installed.
+Consult the guide for your operating system and do ALL the steps in order.
+https://twentysix26.github.io/Red-Docs/
+Traceback (most recent call last):
+  File "red.py", line 570, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\Joshua\Desktop\Red-DiscordBot-develop\cogs\owner.py", line 948, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Joshua\Desktop\Red-DiscordBot-develop\cogs\audio.py", line 2549, in setup
+    "".format(msg))
+RuntimeError: ffmpeg isn't installed.
+Consult the guide for your operating system and do ALL the steps in order.
+https://twentysix26.github.io/Red-Docs/
+
+[09/05/2018 15:41] ERROR red load_cogs 573: HTTPSConnectionPool(host='api.imgur.com', port=443): Max retries exceeded with url: /3/credits (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x03914110>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+Traceback (most recent call last):
+  File "lib\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "lib\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Joshua\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lib\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "lib\urllib3\connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "lib\urllib3\connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "lib\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "lib\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x03914110>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lib\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "lib\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "lib\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.imgur.com', port=443): Max retries exceeded with url: /3/credits (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x03914110>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "red.py", line 570, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\Joshua\Desktop\Red-DiscordBot-develop\cogs\owner.py", line 948, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Joshua\Desktop\Red-DiscordBot-develop\cogs\image.py", line 168, in setup
+    bot.add_cog(Image(bot))
+  File "C:\Users\Joshua\Desktop\Red-DiscordBot-develop\cogs\image.py", line 22, in __init__
+    self.imgur = ImgurClient(CLIENT_ID, CLIENT_SECRET)
+  File "lib\imgurpython\client.py", line 85, in __init__
+    self.credits = self.get_credits()
+  File "lib\imgurpython\client.py", line 94, in get_credits
+    return self.make_request('GET', 'credits', None, True)
+  File "lib\imgurpython\client.py", line 131, in make_request
+    response = method_to_call(url, headers=header, params=data, data=data)
+  File "lib\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "lib\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "lib\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "lib\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "lib\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.imgur.com', port=443): Max retries exceeded with url: /3/credits (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x03914110>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+[09/05/2018 15:41] ERROR red <module> 634: Fatal exception, attempting graceful logout
+Traceback (most recent call last):
+  File "lib\aiohttp\connector.py", line 304, in connect
+    yield from self._create_connection(req)
+  File "lib\aiohttp\connector.py", line 578, in _create_connection
+    transport, proto = yield from self._create_direct_connection(req)
+  File "lib\aiohttp\connector.py", line 589, in _create_direct_connection
+    hosts = yield from self._resolve_host(req.host, req.port)
+  File "lib\aiohttp\connector.py", line 561, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "lib\aiohttp\resolver.py", line 29, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "C:\Users\Joshua\AppData\Local\Programs\Python\Python36-32\lib\concurrent\futures\thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Joshua\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "red.py", line 614, in <module>
+    loop.run_until_complete(main(bot))
+  File "C:\Users\Joshua\AppData\Local\Programs\Python\Python36-32\lib\asyncio\base_events.py", line 468, in run_until_complete
+    return future.result()
+  File "red.py", line 599, in main
+    bot=not bot.settings.self_bot)
+  File "lib\discord\client.py", line 416, in login
+    yield from getattr(self, '_login_' + str(n))(*args, **kwargs)
+  File "lib\discord\client.py", line 346, in _login_1
+    data = yield from self.http.static_login(token, bot=is_bot)
+  File "lib\discord\http.py", line 258, in static_login
+    data = yield from self.request(Route('GET', '/users/@me'))
+  File "lib\discord\http.py", line 137, in request
+    r = yield from self.session.request(method, url, **kwargs)
+  File "lib\aiohttp\client.py", line 555, in __iter__
+    resp = yield from self._coro
+  File "lib\aiohttp\client.py", line 198, in _request
+    conn = yield from self._connector.connect(req)
+  File "lib\aiohttp\connector.py", line 314, in connect
+    .format(key, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno 11001] Cannot connect to host discordapp.com:443 ssl:True [getaddrinfo failed]

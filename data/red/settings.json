@@ -1,0 +1,14 @@
+{
+    "EMAIL" : null,
+    "OWNER" : "416781033250226176",
+    "PASSWORD" : null,
+    "PREFIXES" : [
+        "?"
+    ],
+    "TOKEN" : "NDQzNjcwODg2MzgyNTY3NDI0.DdQzhw.pLSgwLACRS35z1EGRUdtlF6lmsU",
+    "default" : {
+        "ADMIN_ROLE" : "Poofv2",
+        "MOD_ROLE" : "creator",
+        "PREFIXES" : []
+    }
+}
