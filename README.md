@@ -1,2 +1,2 @@
-# Repofordisbot
-For mrpoofv2
+# DefinitelyNotBot
+A Discord bot coded in Discord.JS, hosted using Heroku.
